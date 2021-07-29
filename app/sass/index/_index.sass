@@ -1,0 +1,186 @@
+.first
+    &::after
+        content: ''
+        background: url('../img/wave-cover.png') center center/cover no-repeat
+        width: 100%
+        height: 460px
+        position: absolute
+        bottom: 240px
+    &__sliderNav
+        .slick-track
+            display: flex
+            flex-direction: column
+
+.about
+    padding-bottom: 785px
+    background: url('../img/about-bg.png') center center/cover no-repeat
+    background-position-y: 380px
+    .container
+        position: relative
+    &__info 
+        display: flex
+        flex-direction: column
+        max-width: 394px
+        margin-top: 31px
+    &__text
+        margin-bottom: 42px
+        font-size: 14px
+        line-height: 23px
+    &__btn
+        
+    &__item
+        display: flex
+        flex-direction: column
+        width: 185px
+        border-radius: 10px
+        background: #fff
+        box-shadow: 0px 15px 45px rgba(7, 55, 115, 0.1)
+        img
+            height: 125px
+            border-radius: 10px 10px 0 0
+        &--first
+            position: absolute
+            top: 140px
+            right: 524px
+        &--second
+            position: absolute
+            top: 175px
+            right: 208px
+        &--third
+            position: absolute
+            top: 369px
+            right: 629px
+        &--four
+            position: absolute
+            top: 469px
+            right: 315px
+        &--five
+            position: absolute
+            right: 0
+            top: 419px
+    &__itemText
+        font-size: 14px
+        font-family: "Raleway-Bold"
+        padding: 13px 16px 20px 16px
+
+.product
+    margin-bottom: 135px
+    margin-top: -320px
+    height: 1040px
+    .container
+        position: relative
+    &__block
+        display: flex
+        margin-top: -300px
+    &__item
+        display: flex
+        flex-direction: column
+        position: relative
+        width: 290px
+        img
+            position: relative
+            z-index: 10
+            display: block
+            margin: 0 auto
+        &--first
+            position: absolute
+            img
+                margin-left: 70px
+        &--second
+            position: absolute
+            left: 447px
+            top: -30px
+        &--third
+            position: absolute
+            right: 105px
+            top: -130px
+        &--four
+            position: absolute
+            left: 105px
+            top: 480px
+        &--five
+            position: absolute
+            left: 525px
+            top: 630px
+        &--six
+            position: absolute
+            right: 5px
+            top: 430px
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            width: 290px
+            height: 290px
+            z-index: 1
+            bottom: -68px
+            background: rgba(255, 255, 255, 0.25)
+            border-radius: 50%
+            backdrop-filter: blur(5px)
+            border: 1px solid #273992
+    &__itemTitle
+        font-size: 16px
+        text-transform: uppercase
+        font-family: "Raleway-Bold"
+        margin-top: 20px
+        text-align: center
+        color: #000
+        position: relative
+        z-index: 2
+    
+.start
+    padding-bottom: 785px
+    background: url('../img/start-bg.png') center center/cover no-repeat
+    background-position-y: 100px
+    position: relative
+    &__circle
+        background: url('../img/start-circle.png') center center/cover no-repeat
+        width: 537px
+        height: 466px
+        position: absolute
+        top: 300px
+        left: 50%
+        transform: translateX(-50%)
+    &__title
+        font-family: "PhillippScript"
+        font-size: 52px
+        color: #fff
+        text-align: center
+        margin-top: 189px
+        margin-bottom: 20px
+        line-height: 61px
+        font-weight: 300
+    &__btn
+        margin: 0 auto
+
+.our-teachers
+    margin-bottom: 200px
+    &__slider
+        margin-top: -120px
+    &__item
+        display: flex !important
+        width: 630px
+        margin: 0 100px
+        img
+            display: block
+            border-radius: 20px
+            margin-right: 13px
+    &__box
+        background: rgba(255, 255, 255, 0.1)
+        backdrop-filter: blur(15px)
+        padding: 33px 20px 27px 41px
+        border-radius: 20px
+        min-width: 407px
+    &__itemTitle
+        font-family: "Raleway-Bold"
+        font-size: 20px
+        margin-bottom: 20px
+    &__text
+        p
+            font-size: 14px
+            span
+                font-family: "Raleway-Bold"
+            &:not(:last-child)
+                margin-bottom: 20px

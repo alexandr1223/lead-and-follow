@@ -1,0 +1,149 @@
+html,
+body 
+	height: 100%
+	background: #fff
+	font-family: "Raleway-Regular"
+
+.wrapper 
+	display: flex
+	flex-direction: column
+	min-height: 100%
+
+.main 
+	word-wrap: break-word
+	flex: 1 0 auto
+
+.footer 
+	flex: 0 0 auto
+
+.container
+  width: 1240px
+  margin: 0 auto
+  padding: 0 15px
+
+.title
+	word-wrap: break-word
+	font-size: 180px
+	color: #073773
+	text-align: center
+	font-family: "PhillippScript"
+	font-weight: 300
+	line-height: 212px
+
+.subtitle
+	word-wrap: break-word
+
+.btn
+	display: flex
+	align-items: center
+	cursor: pointer
+	span
+		font-size: 16px
+		padding: 9px 0
+		font-family: "Raleway-Bold"
+		margin-left: -6px
+		background: #fff
+		text-transform: uppercase
+		color: #073773
+
+.white-btn
+	background: #fff
+	border-radius: 60px
+	font-size: 16px
+	padding: 22px 46px
+	color: #3483C7
+	font-family: "Raleway-Bold"
+	text-transform: uppercase
+	width: 232px
+	line-height: 16px
+	text-align: center
+	cursor: pointer
+
+input
+	cursor: pointer
+	&::placeholder,
+	&::-webkit-input-placeholder,
+	&::-moz-placeholder,
+	&::-ms-input-placeholder,
+		color: #fff
+
+.header
+	.container	
+		width: 1320px
+	&__nav
+		display: flex
+		align-items: center
+		height: 87px
+		&::after
+			
+	&__logo
+		margin-right: 48px
+		margin-top: 14px
+	&__links
+		display: flex
+		margin-right: 47px
+		li
+			display: block 
+			a
+				padding: 4px 0 
+				font-family: Lato, sans-serif 
+				color: #000
+				text-decoration: none 
+				text-transform: uppercase 
+				transition: 0.5s 
+				white-space: nowrap
+				position: relative
+				&::after
+					position: absolute 
+					content: "" 
+					top: 100% 
+					left: 0 
+					width: 100% 
+					height: 3px 
+					background: #3483C7
+					transform: scaleX(0) 
+					transform-origin: right 
+					transition: transform 0.5s 
+				&:hover 
+					color: #3483C7
+					&::after 
+						transform: scaleX(1) 
+						transform-origin: left 
+			&:not(:last-child)
+				margin-right: 24px
+	&__shedule
+		display: flex
+		align-items: center
+		margin-right: 43px
+		a
+			font-family: "Raleway-Bold"
+			font-size: 13px
+			color: #073773
+			margin-left: 6px
+			text-transform: uppercase
+	&__social
+		display: flex
+		margin-right: 44px
+		a
+			width: 28px
+			height: 28px
+			border: 1px solid #939598
+			border-radius: 50%
+			display: block
+			position: relative
+			svg
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+			&:not(:last-child)
+				margin-right: 7px
+	&__lang
+		a
+			font-size: 12px
+			text-transform: uppercase
+			white-space: nowrap
+			&:not(:last-child)
+				margin-right: 15px
+			.active
+				color: #073773
