@@ -1,0 +1,69 @@
+.about-us
+    padding-top: 39px
+    background: url('../img/about-page-bg.png') center center/cover no-repeat
+    background-position-y: 590px
+    &__text
+        max-width: 394px
+        font-size: 14px
+        line-height: 24px
+        margin: 0 auto
+        margin-bottom: 80px
+    &__block
+        display: flex
+        flex-direction: column
+    &__item
+        display: flex
+        &--second
+            margin-left: auto
+            margin-top: 92px
+        &--third
+            margin-top: 90px
+        &--four
+            margin-left:  auto
+            margin-top: 118px
+    &__circle
+        position: relative
+        margin-top: -20px
+        display: block
+        margin-right: 37px
+        width: 286px
+        height: 286px
+        border: 1px solid #273992
+        background: rgba(255, 255, 255, 0.1)
+        backdrop-filter: blur(15px)
+        border-radius: 50%
+        z-index: 1
+        img
+            position: relative
+            z-index: 10
+            margin-top: -20%
+            position: absolute
+        &--first
+            img
+                left: 67px
+                bottom: 51px
+        &--second
+            img
+                left: 48px
+                bottom: 60px
+        &--third
+           img
+               left: 7px
+               bottom: 96px
+        &--four
+            img
+                left: 96px
+                bottom: 58px
+    &__content
+        display: flex
+        flex-direction: column
+        max-width: 394px
+    &__itemTitle
+        font-family: "PhillippScript"
+        margin-bottom: 20px
+        font-size: 54px
+        color: #073773
+    &__itemText
+        font-size: 14px
+        line-height: 24px
+        margin-bottom: 8px

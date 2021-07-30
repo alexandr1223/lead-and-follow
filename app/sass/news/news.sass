@@ -1,0 +1,207 @@
+.news
+    padding-top: 72px
+    margin-bottom: 111px
+    position: relative
+    &__block
+        position: relative
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 40px
+        width: 813px
+        margin: 0 auto
+        z-index: 4
+    &__blur1
+        position: absolute
+        top: 420px
+        left: -540px
+        opacity: .2
+        z-index: 3
+    &__blur2
+        position: absolute
+        top: 700px
+        right: -718px
+        opacity: .2
+        z-index: 3
+    &__bg1
+        position: absolute
+        top: 404px
+        left: 0
+        width: 100%
+        height: auto
+        z-index: 1
+    &__bg2
+        position: absolute
+        width: 100%
+        bottom: -430px
+        height: auto
+        left: 0
+        z-index: 1
+    &__item
+        display: flex
+        border-radius: 20px
+    &__image
+        min-width: 268px
+        max-width: 268px
+        img
+            width: 268px
+            border-top-left-radius: 20px
+            border-bottom-left-radius: 20px 
+    &__content
+        padding: 13px 30px 16px 27px
+        display: flex
+        flex-direction: column
+        background: rgba(255, 255, 255, 0.1)
+        backdrop-filter: blur(15px)
+        border-bottom: 1px solid #E1E1E1
+        border-right: 1px solid #E1E1E1
+        border-bottom-right-radius: 20px
+        position: relative
+        // &::after
+        //     content: ''
+        //     width: 10px
+        //     height: 140px
+        //     border
+        //     display: block
+        //     position: absolute
+        //     right: -1px
+        //     top: 0
+        //     background: #fff
+    &__date
+        color: #C4C4C4
+        margin-bottom: 9px
+        font-size: 12px
+    &__itemTitle
+        font-size: 20px
+        color: #000
+        margin-bottom: 14px
+        max-width: 418px
+        font-family: "Raleway-Bold"
+    &__itemText
+        font-size: 12px
+        line-height: 18px
+    &__readMore
+        margin-top: auto
+        margin-left: auto
+        display: flex
+        align-items: center
+        font-size: 12px
+        color: #073773
+        text-transform: uppercase
+        font-family: "Raleway-Bold"
+        svg
+            fill: #273992
+            margin-right: 7px
+            width: 16px
+    &__pagination
+        margin: 0 auto
+        width: max-content
+        margin-top: 18px
+        ul
+            padding: 0
+            display: flex
+            align-items: center
+            li
+                list-style: none
+                position: relative
+                margin: 0 6px
+                &:last-child
+                    margin-right: 0
+                &:first-child
+                    margin-left: 0
+    &__number
+        a 
+            font-size: 12px
+            color: #122735
+            height: 35px
+            width: 35px
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 50%
+            font-family: "Raleway-Bold"
+            transition: .3s
+            &:hover
+                color: #fff
+                background: #273992
+    &__active
+        a
+            background: #273992
+            color: #fff
+    &__previous
+        svg
+            display: block
+            margin: 0 auto
+            width: 16px
+            height: auto
+            transform: rotate(180deg)
+            path
+                fill: #273992
+        &--disable
+            svg
+                path
+                    fill: #939598
+    &__next
+        svg
+            display: block
+            margin: 0 auto
+            width: 16px
+            height: auto
+            path
+                fill: #273992
+        &--disable
+            svg
+                path
+                    fill: #939598
+
+.one-news
+
+
+.news-content
+    &__text
+        max-width: 804px
+        margin: 0 auto
+        p
+            font-size: 16px
+            line-height: 27px
+        ul
+            padding-left: 0
+            margin: 40px 0
+            li
+                font-size: 16px
+                list-style: none
+                display: flex
+                align-items: center
+                &::before
+                    content: ''
+                    display: block
+                    width: 4px
+                    height: 4px
+                    background: #4858A4
+                    margin-right: 8px
+                &:not(:last-child)
+                    margin-bottom: 16px
+    &__image
+        width: 1025px
+        margin-top: 60px
+        margin: 0 auto
+        img
+            margin: 0 auto
+            width: 100%
+            border-radius: 10px
+            box-shadow: 0px 15px 44px rgba(7, 55, 115, 0.1)
+    &__descr
+        font-size: 10px
+        max-width: 553px
+        margin-left: auto
+        text-align: right
+        margin-top: 13px
+    &__rightBlock
+        margin-top: 60px
+        display: flex
+        p
+            margin-right: 50px
+            font-size: 16px
+            line-height: 27px
+        img
+            width: 291px
+            height: auto

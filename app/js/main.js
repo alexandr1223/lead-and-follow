@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.first__sliderFor',
-        dots: true,
+        variableWidth: true,
+        dots: false,
         centerMode: true,
         focusOnSelect: true
     });
@@ -51,8 +52,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         $('.our-teachers__slider').slick({
             centerMode: true,
             centerPadding: '100px',
+            dots: true,
             slidesToShow: 3,
             variableWidth: true,
+            prevArrow: "<div class='prev'><img src='../img/svg/arrow.svg' alt='1'></div>",
+            nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
             responsive: [
               {
                 breakpoint: 768,

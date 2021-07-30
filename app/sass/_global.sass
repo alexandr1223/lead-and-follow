@@ -8,6 +8,7 @@ body
 	display: flex
 	flex-direction: column
 	min-height: 100%
+	overflow: hidden
 
 .main 
 	word-wrap: break-word
@@ -42,7 +43,7 @@ body
 		padding: 9px 0
 		font-family: "Raleway-Bold"
 		margin-left: -6px
-		background: #fff
+		background: transparent
 		text-transform: uppercase
 		color: #073773
 
@@ -59,6 +60,15 @@ body
 	text-align: center
 	cursor: pointer
 
+.blur
+	width: 793px
+	height: 793px
+	background: #3483C7
+	opacity: .2
+	border-radius: 50%
+	filter: blur(264px)
+
+
 input
 	cursor: pointer
 	&::placeholder,
@@ -74,19 +84,31 @@ input
 		display: flex
 		align-items: center
 		height: 87px
+		position: relative
 		&::after
-			
+			content: ''
+			display: block
+			position: absolute
+			width: 432px
+			height: 41px
+			background: url('../img/svg/swosh.svg') center center/cover no-repeat
+			left: -80px
+			bottom: -18px
+			z-index: 2
 	&__logo
 		margin-right: 48px
 		margin-top: 14px
+		position: relative
+		z-index: 10
+		svg
+			z-index: 10
 	&__links
 		display: flex
 		margin-right: 47px
 		li
 			display: block 
 			a
-				padding: 4px 0 
-				font-family: Lato, sans-serif 
+				padding: 4px 0
 				color: #000
 				text-decoration: none 
 				text-transform: uppercase 
@@ -147,3 +169,111 @@ input
 				margin-right: 15px
 			.active
 				color: #073773
+
+.footer
+	background: url('../img/footer-bg.png') center center/cover no-repeat
+	padding-bottom: 12px
+	padding-top: 30px
+	z-index: 2
+	&__nav
+		display: flex
+		align-items: center
+		margin-bottom: 26px
+		&::after
+			
+	&__logo
+		margin-bottom: 8px
+		margin-top: 34px
+		svg	
+			path	
+				fill: #fff
+	&__links
+		display: flex
+		margin-right: 42px
+		li
+			display: block 
+			a
+				padding: 4px 0 
+				color: #fff
+				text-decoration: none 
+				text-transform: uppercase 
+				transition: 0.5s 
+				white-space: nowrap
+				position: relative
+				&::after
+					position: absolute 
+					content: "" 
+					top: 100% 
+					left: 0 
+					width: 100% 
+					height: 3px 
+					background: #3483C7
+					transform: scaleX(0) 
+					transform-origin: right 
+					transition: transform 0.5s 
+				&:hover 
+					color: #3483C7
+					&::after 
+						transform: scaleX(1) 
+						transform-origin: left 
+			&:not(:last-child)
+				margin-right: 24px
+	&__shedule
+		display: flex
+		align-items: center
+		margin-right: 43px
+		color: #fff
+		a
+			font-family: "Raleway-Bold"
+			font-size: 13px
+			color: #fff
+			margin-left: 6px
+			text-transform: uppercase
+		svg
+			path
+				fill: #fff
+	&__social
+		display: flex
+		a
+			width: 28px
+			height: 28px
+			border: 1px solid #fff
+			border-radius: 50%
+			display: block
+			position: relative
+			svg
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				path
+					fill: #fff
+			&:not(:last-child)
+				margin-right: 7px
+	&__rights
+		display: flex
+		align-items: flex-end
+	&__address
+		color: #fff
+		max-width: 128px
+		font-size: 11px
+		margin-right: 200px
+	&__reserved
+		font-size: 8px
+		color: #fff
+		margin-right: 47px
+
+.first-screen
+	width: 100%
+	position: relative
+	img
+		width: 100%
+	&__title
+		font-size: 100px
+		line-height: 118px
+		font-family: "PhillippScript"
+		left: 50%
+		transform: translateX(-50%)
+		top: 87px
+		position: absolute
+		color: #fff
