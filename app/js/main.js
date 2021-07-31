@@ -31,6 +31,69 @@ document.addEventListener("DOMContentLoaded", function(event) {
     } 
     // menu('', '', '');
 
+    function tabs() {
+		if (document.querySelector('.shedule')) {
+			var $ = function (selector) {
+				return document.querySelectorAll(selector);
+			};
+			
+			// Define tabs, write down them classes
+			var tabs = [
+			'.shedule__selector-tab-1',
+			'.shedule__selector-tab-2'
+			];
+			
+			// Create the toggle function
+			var toggleTab = function(element) {
+				var parent = element.parentNode;
+				
+				// Do things on click
+				$(element)[0].addEventListener('click', function(){
+					this.parentNode.childNodes[1].classList.remove('active');
+					this.parentNode.childNodes[3].classList.remove('active');
+				
+					this.classList.add('active');
+					
+					// Check if the clicked tab contains the class of the 1 or 2
+					if(this.classList.contains('shedule__selector-tab-1')) {
+					// and change the classes, show the first content panel
+					$('.shedule-section-1')[0].classList.remove('hidden');
+					$('.shedule-section-1')[0].classList.add('visible');
+					
+					// Hide the second
+					$('.shedule-section-2')[0].classList.remove('visible');
+					$('.shedule-section-2')[0].classList.add('hidden');
+					}
+				
+					if(this.classList.contains('shedule__selector-tab-2')) {
+					// and change the classes, show the second content panel
+					$('.shedule-section-2')[0].classList.remove('hidden');
+					$('.shedule-section-2')[0].classList.add('visible');
+					// Hide the first
+					$('.shedule-section-1')[0].classList.remove('visible');
+					$('.shedule-section-1')[0].classList.add('hidden');
+					}
+				});
+			};
+			for (var i = tabs.length - 1; i >= 0; i--) {
+				toggleTab(tabs[i])
+			};
+		}
+	}
+	tabs();
+
+	function productTabs() {
+		$('.shedule__product').each(function() {
+			let ths = $(this);
+			ths.find('.shedule__contentItem').not(':first').hide();
+			ths.find('.shedule__product-tab').click(function() {
+				ths.find('.shedule__product-tab').removeClass('shedule__product-tab--activeTab').eq($(this).index()).addClass('shedule__product-tab--activeTab');
+				ths.find('.shedule__contentItem').hide().eq($(this).index()).fadeIn()
+			}).eq(0).addClass('active');
+		});
+	}
+	productTabs();
+
     $('.first__sliderFor').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -49,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     $(document).ready(function(){
-        $('.our-teachers__slider').slick({
+      $('.our-teachers__slider').slick({
             centerMode: true,
             centerPadding: '100px',
             dots: true,
@@ -77,6 +140,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
               }
             ]
-          });
+        });
+
+        $('.one-class__slider').slick({
+          slidesToShow: 1,
+          variableWidth: true,
+          prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
+          nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
+        });
+
+        $('.one-news__sliderFor').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          fade: true,
+          asNavFor: '.one-news__sliderNav',
+          prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
+          nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
+        });
+      $('.one-news__sliderNav').slick({
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          asNavFor: '.one-news__sliderFor',
+          variableWidth: true,
+          dots: false,
+          arrows: false,
+          centerMode: true,
+          focusOnSelect: true
+      });
     })
 });

@@ -1,0 +1,123 @@
+.prices
+    padding-top: 53px
+    position: relative
+    &__blur1
+        position: absolute
+        top: 750px
+        left: -540px
+        opacity: .2
+        z-index: 3
+    &__blur2
+        position: absolute
+        top: 240px
+        right: -718px
+        opacity: .2
+        z-index: 3
+    &__bg1
+        position: absolute
+        top: -300px
+        left: 0
+        width: 100%
+        height: auto
+        z-index: 1
+    &__bg2
+        position: absolute
+        width: 100%
+        bottom: 40px
+        height: auto
+        left: 0
+        z-index: 1
+    &__block
+        width: 811px
+        margin: 0 auto
+        position: relative
+        z-index: 4
+    &__item
+        display: flex
+        height: 274px
+        border: 1px solid #ccc
+        border-radius: 20px
+    &__image
+        min-width: 285px
+        max-width: 285px
+        height: 100%
+        object-fit: cover
+        img
+            border-top-left-radius: 20px
+            border-bottom-left-radius: 20px
+    &__content
+        padding: 25px 100px 18px 25px
+        display: flex
+        flex-direction: column
+        border-top-right-radius: 20px
+        border-bottom-right-radius: 20px
+    &__itemTitle
+        font-size: 24px
+        line-height: 28px
+        color:#073773
+        margin-bottom: 24px
+        font-family: "Raleway-Bold"
+    &__itemText
+        font-size: 14px
+        line-height: 26px
+        span
+            font-family: "Raleway-Bold"
+    &__smallText
+        font-size: 10px
+        margin-top: 4px
+    &__more
+        margin-top: auto
+        font-size: 12px
+        font-family: "Raleway-Bold"
+        span
+            color: #3483C7
+    &__list
+        display: grid
+        grid-gap: 25px
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        margin-top: 170px
+        position: relative
+        z-index: 4
+        &--one-class
+            margin-top: 105px
+    &__listItem
+        background: #fff
+        box-shadow: 0px 15px 45px rgba(7, 55, 115, 0.1)
+        border-radius: 10px
+        padding: 26px 18px 34px 18px
+    &__listTitle
+        height: 36px
+        font-size: 14px
+        line-height: 18px
+        font-family: "Raleway-Bold"
+        max-width: 154px
+        text-transform: uppercase
+        margin-bottom: 20px
+    &__listPrice
+        li
+            font-size: 14px
+            &:not(:last-child)
+                margin-bottom: 4px
+            span
+                color: #073773
+                font-family: "Raleway-Bold"
+    &__circle
+        background: url('../img/start-circle.png') center center/cover no-repeat
+        width: 537px
+        height: 466px
+        margin: 0 auto
+        margin-top: 87px
+        margin-bottom: 88px
+        position: relative
+        z-index: 4
+    &__title
+        font-family: "PhillippScript"
+        font-size: 52px
+        color: #fff
+        text-align: center
+        padding-top: 189px
+        margin-bottom: 20px
+        line-height: 61px
+        font-weight: 300
+    &__btn
+        margin: 0 auto

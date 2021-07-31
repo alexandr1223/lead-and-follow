@@ -154,12 +154,122 @@
                     fill: #939598
 
 .one-news
-
+    padding-top: 40px
+    position: relative
+    z-index: 4
+    &__blur1
+        position: absolute
+        top: 258px
+        left: -718px
+        opacity: .2
+        z-index: 3
+    &__blur2
+        position: absolute
+        top: 782px
+        right: -540px
+        opacity: .2
+        z-index: 3
+    &__blur3
+        position: absolute
+        bottom: -250px
+        right: -540px
+        opacity: .2
+        z-index: 3
+    &__bg1
+        position: absolute
+        top: 280px
+        left: 0
+        width: 100%
+        height: auto
+        z-index: 1
+    &__bg2
+        position: absolute
+        width: 100%
+        bottom: 740px
+        height: auto
+        left: 0
+        z-index: 1
+    &__content
+        max-width: 804px
+        margin: 0 auto
+        position: relative
+        z-index: 4
+    &__itemTitle
+        font-size: 46px
+        line-height: 54px
+        font-family: "PhillippScript"
+        margin-bottom: 15px
+        color: #073773
+    &__itemText
+        margin-bottom: 48px
+        p
+            font-size: 16px
+            line-height: 27px
+            &:not(:last-child)
+                margin-bottom: 40px
+    &__slider
+        margin: 0 auto
+        margin-bottom: 68px
+        position: relative
+        z-index: 4
+        .slick-track
+            img
+                border-radius: 10px
+                margin: 0 auto
+        .next
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: -70px
+            cursor: pointer
+            img
+                width: 26px
+                height: auto
+        .prev
+            position: absolute
+            top: 50%
+            transform: translateY(-50%) rotate(180deg)
+            left: -105px
+            width: 75px
+            cursor: pointer
+            img
+                width: 75px
+                height: auto
+    &__sliderFor
+        margin: 0 auto
+        width: 1026px
+    &__sliderNav
+        margin-top: 23px
+        img
+            width: 186px
+            height: 109px
+            object-fit: cover
+    &__sliderImage
+        margin: 0 12px
+        position: relative
+        &::after
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            display: block
+            background: #fff
+            opacity: .6
+            transition: .4s
+.slick-current
+    &::after
+        opacity: 0
 
 .news-content
+    padding-bottom: 134px
+    position: relative
+    z-index: 4
     &__text
         max-width: 804px
         margin: 0 auto
+        margin-bottom: 60px
         p
             font-size: 16px
             line-height: 27px
@@ -205,3 +315,172 @@
         img
             width: 291px
             height: auto
+
+
+.special-events
+    padding-top: 72px
+    margin-bottom: 111px
+    position: relative
+    &__blur1
+        position: absolute
+        top: 420px
+        left: -540px
+        opacity: .2
+        z-index: 3
+    &__blur2
+        position: absolute
+        top: 700px
+        right: -718px
+        opacity: .2
+        z-index: 3
+    &__bg1
+        position: absolute
+        top: 404px
+        left: 0
+        width: 100%
+        height: auto
+        z-index: 1
+    &__bg2
+        position: absolute
+        width: 100%
+        bottom: -430px
+        height: auto
+        left: 0
+        z-index: 1
+    &__block
+        position: relative
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 15px 25px
+        width: 1026px
+        margin: 0 auto
+        z-index: 4
+    &__item
+        display: flex
+        flex-direction: column
+        border-radius: 20px
+        &:first-child
+            margin-bottom: 13px
+            grid-column-start: 1
+            grid-column-end: 3
+            .special-events__itemText
+                display: block
+            .special-events__placement
+                color: #073773
+    &__image
+        max-width: 100%
+        img
+            width: 100%
+            border-top-left-radius: 20px
+            border-top-right-radius: 20px 
+    &__content
+        padding: 33px 20px 22px 45px
+        display: flex
+        flex-direction: column
+        background: rgba(255, 255, 255, 0.1)
+        backdrop-filter: blur(15px)
+        border-bottom-right-radius: 20px
+        border-bottom-left-radius: 20px
+        min-height: 163px
+        position: relative
+        border: 1px solid #E1E1E1
+
+    &__placement
+        color: #939598
+        margin-bottom: 9px
+        font-size: 12px
+        line-height: 14px
+        max-width: 160px
+    &__date
+        color: #C4C4C4
+        margin-bottom: 9px
+        font-size: 12px
+    &__itemTitle
+        font-size: 20px
+        color: #000
+        margin-bottom: 14px
+        max-width: 418px
+        font-family: "Raleway-Bold"
+    &__itemText
+        display: none
+        max-width: 90%
+        p
+            font-size: 12px
+            line-height: 18px
+            &:not(:last-child)
+                margin-bottom: 20px
+    &__readMore
+        margin-top: auto
+        margin-left: auto
+        display: flex
+        align-items: center
+        font-size: 12px
+        color: #073773
+        text-transform: uppercase
+        font-family: "Raleway-Bold"
+        svg
+            fill: #273992
+            margin-right: 7px
+            width: 16px
+    &__pagination
+        margin: 0 auto
+        width: max-content
+        margin-top: 37px
+        position: relative
+        z-index: 4
+        ul
+            padding: 0
+            display: flex
+            align-items: center
+            li
+                list-style: none
+                position: relative
+                margin: 0 6px
+                &:last-child
+                    margin-right: 0
+                &:first-child
+                    margin-left: 0
+    &__number
+        a 
+            font-size: 12px
+            color: #122735
+            height: 35px
+            width: 35px
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 50%
+            font-family: "Raleway-Bold"
+            transition: .3s
+            &:hover
+                color: #fff
+                background: #273992
+    &__active
+        a
+            background: #273992
+            color: #fff
+    &__previous
+        svg
+            display: block
+            margin: 0 auto
+            width: 16px
+            height: auto
+            transform: rotate(180deg)
+            path
+                fill: #273992
+        &--disable
+            svg
+                path
+                    fill: #939598
+    &__next
+        svg
+            display: block
+            margin: 0 auto
+            width: 16px
+            height: auto
+            path
+                fill: #273992
+        &--disable
+            svg
+                path
+                    fill: #939598

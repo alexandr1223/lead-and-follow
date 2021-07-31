@@ -1,0 +1,230 @@
+.classes
+    padding-top: 43px
+    padding-bottom: 78px
+    position: relative
+    &__blur1
+        position: absolute
+        top: 750px
+        left: -540px
+        opacity: .2
+        z-index: 3
+    &__blur2
+        position: absolute
+        top: 240px
+        right: -718px
+        opacity: .2
+        z-index: 3
+    &__bg1
+        position: absolute
+        top: 14px
+        left: 0
+        width: 100%
+        height: auto
+        z-index: 1
+    &__bg2
+        position: absolute
+        width: 100%
+        bottom: 80px
+        height: auto
+        left: 0
+        z-index: 1
+    &__block
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 70px
+        width: 1022px
+        margin: 0 auto
+        position: relative
+        z-index: 4
+    &__item
+        display: flex
+        width: 603px
+        height: 274px
+        padding: 16px 23px 16px 23px
+        border-radius: 20px
+        background: rgba(255, 255, 255, 0.1)
+        backdrop-filter: blur(15px)
+        border: 1px solid #ccc
+        &--right
+            margin-left: auto
+    &__content
+        width: 265px
+        margin-left: auto
+        display: flex
+        flex-direction: column
+    &__image
+        position: absolute
+        left: 53px
+        top: -29px
+        &--second
+            top: -68px
+            left: 43px
+            img
+                width: 242px
+        &--third
+            top: -76px
+            left: 84px
+        &--four
+            top: -76px
+            left: 66px
+            img
+                width: 149px
+        &--five
+            top: -46px
+            left: 26px
+            img
+                width: 239px
+        &--six
+            top: -61px
+            left: 0
+            img
+                width: 243px
+    &__itemTitle
+        font-size: 20px
+        font-family: "Raleway-Bold"
+        margin-bottom: 17px
+    &__itemText
+        font-size: 12px
+        line-height: 18px
+    &__readMore
+        margin-top: auto
+        margin-left: auto
+        display: flex
+        align-items: center
+        font-size: 12px
+        color: #073773
+        text-transform: uppercase
+        font-family: "Raleway-Bold"
+        svg
+            fill: #273992
+            margin-right: 7px
+            width: 16px
+
+.one-class
+    position: relative
+    z-index: 4
+    padding-top: 78px
+    &__blur1
+        position: absolute
+        top: 750px
+        left: -540px
+        opacity: .2
+        z-index: 3
+    &__blur2
+        position: absolute
+        top: 240px
+        right: -718px
+        opacity: .2
+        z-index: 3
+    &__blur3
+        position: absolute
+        top: 2200px
+        right: -718px
+        opacity: .2
+        z-index: 3
+    &__bg1
+        position: absolute
+        width: 100%
+        top: 0px
+        height: auto
+        left: 0
+        z-index: 1
+    &__bg2
+        position: absolute
+        width: 100%
+        bottom: 790px
+        height: auto
+        left: 0
+        z-index: 1
+    &__slider
+        margin: 0 auto
+        margin-bottom: 47px
+        width: 1026px
+        position: relative
+        z-index: 4
+        .slick-track
+            img
+                border-radius: 10px
+                margin: 0 auto
+        .next
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: -70px
+            cursor: pointer
+            img
+                width: 26px
+                height: auto
+        .prev
+            position: absolute
+            top: 50%
+            transform: translateY(-50%) rotate(180deg)
+            left: -105px
+            width: 75px
+            cursor: pointer
+            img
+                width: 75px
+                height: auto
+    &__text
+        max-width: 804px
+        margin: 0 auto
+        margin-bottom: 93px
+        position: relative
+        z-index: 4
+        p
+            font-size: 16px
+            line-height: 27px
+            &:not(:last-child)
+                margin-bottom: 40px
+    &__teachers       
+        position: relative
+        z-index: 4
+    &__teachersTitle
+        margin-bottom: 23px
+    &__teachersBlock
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 24px 0
+    &__teachersItem
+        display: flex
+    &__teachersBox
+        background: rgba(255, 255, 255, 0.1)
+        backdrop-filter: blur(15px)
+        padding: 33px 20px 27px 41px
+        border-radius: 20px
+        min-width: 407px
+    &__teahcersTitle
+        font-family: "Raleway-Bold"
+        font-size: 20px
+        margin-bottom: 20px
+    &__teachersText
+        p
+            font-size: 14px
+            line-height: 21px
+            span
+                font-family: "Raleway-Bold"
+            &:not(:last-child)
+                margin-bottom: 20px
+    &__teachersImage
+        min-width: 210px
+        margin-right: 13px
+    &__circle
+        background: url('../img/start-circle.png') center center/cover no-repeat
+        width: 537px
+        height: 466px
+        margin: 0 auto
+        margin-top: 123px
+        margin-bottom: 92px
+        position: relative
+        z-index: 4
+    &__title
+        font-family: "PhillippScript"
+        font-size: 52px
+        color: #fff
+        text-align: center
+        padding-top: 189px
+        margin-bottom: 20px
+        line-height: 61px
+        font-weight: 300
+    &__btn
+        margin: 0 auto
