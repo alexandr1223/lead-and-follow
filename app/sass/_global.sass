@@ -80,6 +80,8 @@ input
 .header
 	.container	
 		width: 1320px
+	&-mobile
+		display: none
 	&__menu
 		display: none
 	&__nav
@@ -506,7 +508,6 @@ input
 			top: 50px
 			font-size: 60px
 	.footer
-		background: url('../img/footer-tablet-bg.png') center center/cover no-repeat
 		&__logo
 			svg
 				width: 185px
@@ -523,6 +524,10 @@ input
 			svg
 				width: 16px
 				height: auto
+
+@media (max-width: 1050px)
+	.footer
+		background: url('../img/footer-tablet-bg.png') center center/cover no-repeat
 
 @media (max-width: 767px)
 	.container
@@ -611,3 +616,11 @@ input
 		&__shedule
 			a
 				font-size: 11px
+	.first-screen
+		height: 152px
+		img
+			height: 152px
+		&__title
+			top: 30px
+			font-size: 40px
+			line-height: 50px
