@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             })
         }
     } 
-    // menu('', '', '');
+    menu('.header__menu', '.header-mobile', '.header-mobile__close');
 
     function tabs() {
 		if (document.querySelector('.shedule')) {
@@ -118,13 +118,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
             dots: true,
             slidesToShow: 3,
             variableWidth: true,
-            prevArrow: "<div class='prev'><img src='../img/svg/arrow.svg' alt='1'></div>",
+            prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
             nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
             responsive: [
               {
                 breakpoint: 768,
                 settings: {
-                  arrows: false,
                   centerMode: true,
                   centerPadding: '40px',
                   slidesToShow: 3
@@ -133,7 +132,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
               {
                 breakpoint: 480,
                 settings: {
-                  arrows: false,
                   centerMode: true,
                   centerPadding: '40px',
                   slidesToShow: 1

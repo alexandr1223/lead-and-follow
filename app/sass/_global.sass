@@ -80,6 +80,8 @@ input
 .header
 	.container	
 		width: 1320px
+	&__menu
+		display: none
 	&__nav
 		display: flex
 		align-items: center
@@ -344,3 +346,268 @@ input
 	// 		height: 100%
 	// 		background: linear-gradient(75.62deg, #009EE2 7.02%, #273992 91.67%)
 	// 		opacity: .7
+
+@media (max-width: 1480px)
+	.container
+		width: 688px
+		margin: 0 auto
+	.title
+		font-size: 120px
+		line-height: 140px
+	.header
+		overflow: hidden
+		.container
+			width: 100%
+			padding: 0 20px
+		&__nav
+			justify-content: space-between
+			width: 100%
+			max-width: 688px
+			margin: 0 auto
+			height: 59px
+		&__links
+			display: none
+		&__logo
+			margin-right: 0
+			svg
+				width: 179px
+				height: auto
+		&__shedule
+			margin-right: 0
+		&__social
+			margin-right: 0
+			a
+				width: 22px
+				height: 22px
+				svg
+					width: 50%
+		&__menu
+			display: flex
+			cursor: pointer
+			svg
+				width: 30px
+				height: 16px
+	.header-mobile
+		background: rgba(0, 0, 0, .5)
+		width: 100%
+		height: 100vh
+		display: flex
+		position: fixed
+		top: 0
+		left: -100%
+		z-index: 100
+		transition: .4s
+		&__close
+			cursor: pointer
+		&__block	
+			display: flex
+			flex-direction: column
+			background: #fff
+			width: 100%
+			height: 80vh
+			margin-right: 0
+			text-align: center
+		&__nav
+			display: flex
+			justify-content: space-between
+			width: 50%
+			max-width: 588px
+			margin: 0 auto
+			padding-top: 20px
+		&__logo
+			svg
+				width: 180px
+				height: auto
+		&__links
+			display: flex
+			flex-direction: column
+			margin-top: 40px
+			li
+				display: block 
+				a
+					padding: 4px 0
+					color: #000
+					text-decoration: none 
+					text-transform: uppercase 
+					transition: 0.5s 
+					white-space: nowrap
+					position: relative
+					&::after
+						position: absolute 
+						content: "" 
+						top: 100% 
+						left: 0 
+						width: 100% 
+						height: 3px 
+						background: #3483C7
+						transform: scaleX(0) 
+						transform-origin: right 
+						transition: transform 0.5s 
+					&:hover 
+						color: #3483C7
+						&::after 
+							transform: scaleX(1) 
+							transform-origin: left 
+				&:not(:last-child)
+					margin-bottom: 24px
+		&__bottom
+			display: flex
+			width: 50%
+			max-width: 588px
+			margin: 0 auto
+			margin-top: auto
+			justify-content: space-between
+			margin-bottom: 20px
+		&__shedule
+			display: flex
+			align-items: center
+			margin-right: 43px
+			a
+				font-family: "Raleway-Bold"
+				font-size: 13px
+				color: #073773
+				margin-left: 6px
+				text-transform: uppercase
+		&__social
+			display: flex
+			a
+				width: 28px
+				height: 28px
+				border: 1px solid #939598
+				border-radius: 50%
+				display: block
+				position: relative
+				svg
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+				&:not(:last-child)
+					margin-right: 7px
+		&__lang
+			display: flex
+			margin: 0 auto
+			margin-bottom: 20px
+			a
+				font-size: 12px
+				text-transform: uppercase
+				white-space: nowrap
+				color: #939598
+				&:not(:last-child)
+					margin-right: 15px
+			.active
+				font-family: "Raleway-Bold"
+				color: #073773
+	.first-screen
+		height: 274px
+		img
+			height: 274px
+		&__title
+			top: 50px
+			font-size: 60px
+	.footer
+		background: url('../img/footer-tablet-bg.png') center center/cover no-repeat
+		&__logo
+			svg
+				width: 185px
+				height: auto
+		&__nav
+			margin-bottom: 42px
+		&__links
+			li
+				a
+					font-size: 11px
+		&__shedule
+			a
+				font-size: 11px
+			svg
+				width: 16px
+				height: auto
+
+@media (max-width: 767px)
+	.container
+        width: 320px
+        padding: 0 16px
+	.title
+		font-size: 60px
+		line-height: 70px
+	.header
+		&__nav
+			height: 41px
+			max-width: 100%
+			position: relative
+			z-index: 1
+			&::after
+				top: 20px
+				width: 173px
+				height: 16px
+				left: -16px
+				z-index: 2
+		&__shedule
+			display: none
+		&__social
+			display: none
+		&__lang
+			display: none
+		&__logo
+			svg
+				width: 131px
+	.header-mobile
+		&__block
+			height: 90vh
+		&__nav
+			width: 100%
+			padding: 15px 15px 0 15px
+			align-items: center
+		&__logo
+			svg
+				width: 148px
+		&__links
+			margin-top: 27px
+			li
+				a
+					font-size: 18px
+					&:not(:last-child)
+						margin-bottom: 16px
+		&__bottom
+			width: 100%
+			max-width: 100%
+			padding: 15px 20px
+			margin-bottom: 15px
+	.footer
+		background: url('../img/footer-mobile-bg.png') center center/cover no-repeat
+		.container
+			display: grid
+			grid-template-columns: 1fr 1fr
+			grid-gap: 17px 0
+		&__nav
+			display: flex
+			flex-direction: row
+			margin-bottom: 0
+		&__links
+			display: none
+		&__logo
+			margin-top: 0
+			margin-bottom: 0
+			svg
+				width: 102px
+				height: auto
+		&__rights
+			grid-column-start: 1
+			grid-column-end: 3
+		&__address
+			display: none
+		&__reserved
+			margin-right: 0
+		&__social
+			margin-left: auto
+			a
+				width: 15px	
+				height: 15px
+				svg
+					width: 50%
+					max-height: 8px
+					height: auto
+		&__shedule
+			a
+				font-size: 11px
