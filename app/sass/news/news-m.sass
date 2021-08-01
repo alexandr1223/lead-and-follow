@@ -32,6 +32,59 @@
                 font-size: 12px
                 width: 47px
                 height: 47px
+    .one-news
+        padding-top: 52px
+        &__slider
+            margin-bottom: 90px
+        &__itemText
+            p
+                font-size: 14px
+                line-height: 23px
+        &__sliderFor
+            width: 545px
+            height: 318px
+            .slick-track
+                img
+                    width: 545px
+                    height: 318px
+                    object-fit: cover
+        &__sliderImage
+            margin: 0 6px
+        &__sliderNav
+            margin-top: 12px
+            img
+                width: 98px
+                height: 58px
+        .prev
+            width: 40px
+            height: 40px
+            left: -60px
+        .next
+            width: 14px
+            right: -40px
+    .news-content
+        padding-bottom: 110px
+        &__text
+            margin-bottom: 30px
+            p
+                font-size: 14px
+                line-height: 23px
+            ul
+                margin: 30px 0
+                li
+                    font-size: 14px
+        &__image
+            width: 100%
+        &__descr
+            margin-top: 20px
+        &__rightBlock
+            margin-top: 55px
+            p
+                line-height: 23px
+                font-size: 14px
+            img
+                width: 270px
+                object-fit: cover
 
 @media (max-width: 767px)
     .news
@@ -65,3 +118,53 @@
                 font-size: 10px
                 width: 36px
                 height: 36px
+    .one-news
+        padding-top: 20px
+        &__slider
+            margin-bottom: 20px
+        &__itemText
+            margin-bottom: 32px
+            p
+                font-size: 14px
+                line-height: 23px
+        &__sliderFor
+            width: 70%
+            height: auto
+            .slick-track
+                img
+                    width: 100%
+                    height: auto
+                    object-fit: cover
+        &__sliderImage
+            margin: 0 6px
+        &__sliderNav
+            margin-top: 12px
+            img
+                width: 66px
+                height: 45px
+            .slick-track
+                img
+                    border-radius: 5px
+        .prev
+            width: 23px
+            height: 23px
+            left: -40px
+        .next
+            width: 8px
+            right: -25px
+    .news-content
+        padding-bottom: 140px
+        &__descr
+            font-size: 8px
+            line-height: 13px
+            max-width: 235px
+        &__rightBlock
+            display: flex
+            flex-direction: column
+            p
+                margin-right: 0
+                margin-bottom: 33px
+            img
+                width: 100%
+                height: auto
+                border-radius: 10px
