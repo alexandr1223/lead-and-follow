@@ -227,7 +227,7 @@
 .our-teachers
     margin-bottom: 180px
     &__slider
-        margin-top: -120px
+        margin-top: -100px
     &__item
         display: flex !important
         width: 630px
@@ -253,9 +253,18 @@
             background: transparent
     .next
         position: absolute
-        top: 50%
+        width: 26px
+        height: auto
+        top: 55%
         transform: translateY(-50%)
-        right: 38  0px
+        right: 29%
+    .prev
+        position: absolute
+        width: 75px
+        height: 75px
+        top: 55%
+        transform: translateY(-50%) rotate(180deg)
+        left: 28%
     &__box
         background: rgba(255, 255, 255, 0.1)
         backdrop-filter: blur(15px)

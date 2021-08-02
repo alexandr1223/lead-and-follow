@@ -3,6 +3,65 @@
         padding-bottom: 140px
         &__block
             width: 100%
+        &__item
+            backdrop-filter: blur(4px)
+        &__bg1
+            top: 200px
+        &__blur2
+            width: 451px
+            height: 451px
+            right: 0
+            opacity: .4
+        &__blur1
+            width: 451px
+            height: 451px
+            left: -259px
+            opacity: .3
+    .one-class
+        &__bg1
+            top: 50px
+        &__bg2
+            display: none
+        &__blur1
+            width: 380px
+            height: 380px
+            left: -153px
+            top: 476px
+        &__blur2,
+        &__blur3
+            display: none
+        &__slider
+            width: 569px
+            height: auto  
+            margin-bottom: 40px  
+            .slick-track
+                img
+                    width: 569px
+                    height: auto
+        .next
+            right: -47px
+            width: 20px
+            height: auto
+        .prev
+            width: 40px
+            height: 40px
+            left: -60px
+        &__teachersBlock
+            grid-template-columns: 1fr
+            grid-gap: 20px
+        &__circle
+            width: 390px
+            height: 380px
+            margin-bottom: 100px
+            margin-top: 140px
+        &__title
+            padding-top: 150px
+            font-size: 40px
+        &__btn
+            width: 180px
+            height: 47px
+            padding: 0
+            line-height: 47px
 
 @media (max-width: 767px)
     .classes
@@ -25,3 +84,104 @@
                 max-width: 226px
                 max-height: 340px
                 width: auto
+        &__bg1,
+        &__bg2
+            display: none
+        &__blur2
+            width: 300px
+            height: 300px
+            right: -231px
+            top: 1500px
+            opacity: .4
+        &__blur1
+            width: 300px
+            height: 300px
+            left: -259px
+            opacity: .3
+    .one-class
+        padding-top: 20px
+        &__bg1,
+        &__bg2,
+        &__blur1,
+        &__blur2,
+        &__blur3
+            display: none
+        &__slider
+            width: 204px
+            height: auto  
+            margin-bottom: 40px  
+            .slick-track
+                img
+                    width: 204px
+                    height: auto
+        .next
+            right: -30px
+            width: 14px
+            height: auto
+        .prev
+            width: 23px
+            height: 23px
+            left: -43px
+        &__text
+            margin-bottom: 114px
+            p
+                font-size: 14px
+                line-height: 23px
+        &__teachersItem
+            display: flex
+            flex-direction: column
+        &__teachersImage
+            margin-right: 0
+            width: 100%
+            img
+                height: 231px
+                object-fit: cover
+                object-position: top
+                width: 100%
+                border-radius: 20px
+        &__teachersBox
+            min-width: unset
+            margin-top: 14px
+            width: 100%
+            padding: 33px 23px 11px 23px
+            border: 1px solid #ccc
+        &__teachersBlock
+            grid-template-columns: 1fr
+            grid-gap: 20px
+        &__teachersTitle
+            margin-left: 18px
+            font-size: 20px
+            br
+                display: none
+        &__teachersText
+            p
+                font-size: 12px
+        &__circle
+            width: 390px
+            height: 380px
+            margin-bottom: 100px
+            margin-top: 140px
+        &__title
+            padding-top: 150px
+            font-size: 40px
+        &__btn
+            width: 180px
+            height: 47px
+            padding: 0
+            line-height: 47px
+        &__circle
+            width: 294px
+            height: 285px
+            margin-top: 150px
+            margin-bottom: 80px
+        &__title
+            font-size: 30px
+            padding-top: 120px
+            line-height: 40px
+            margin-bottom: 10px
+        &__btn
+            font-size: 10px
+            width: 150px
+            height: 38px
+            line-height: 38px
+            padding: 0

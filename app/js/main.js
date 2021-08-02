@@ -113,32 +113,61 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     $(document).ready(function(){
       $('.our-teachers__slider').slick({
-            centerMode: true,
-            centerPadding: '100px',
-            dots: true,
-            slidesToShow: 3,
-            variableWidth: true,
-            prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
-            nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
-            responsive: [
-              {
-                breakpoint: 768,
-                settings: {
-                  centerMode: true,
-                  centerPadding: '40px',
-                  slidesToShow: 3
-                }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  centerMode: true,
-                  centerPadding: '40px',
-                  slidesToShow: 1
-                }
-              }
-            ]
-        });
+        centerMode: true,
+        centerPadding: '100px',
+        dots: true,
+        slidesToShow: 3,
+        variableWidth: true,
+        prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
+        nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      $('.award__slider').slick({
+        centerMode: true,
+        centerPadding: '100px',
+        dots: true,
+        slidesToShow: 3,
+        variableWidth: true,
+        prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
+        nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
 
         $('.one-class__slider').slick({
           slidesToShow: 1,

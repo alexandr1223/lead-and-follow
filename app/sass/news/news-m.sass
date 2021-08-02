@@ -2,6 +2,18 @@
     .news
         padding-top: 50px
         margin-bottom: 60px
+        &__blur1
+            width: 490px
+            height: 490px
+            left: -344px
+        &__blur2
+            width: 490px
+            height: 490px
+            right: -360px
+        &__bg2
+            display: none
+        &__bg1
+            top: 820px
         &__block
             grid-gap: 20px 0
             width: 100%
@@ -16,6 +28,7 @@
                 object-fit: cover
         &__content
             padding: 23px 14px 21px 24px
+            backdrop-filter: blur(4px)
         &__date
             font-size: 12px
             margin-bottom: 7px
@@ -34,6 +47,21 @@
                 height: 47px
     .one-news
         padding-top: 52px
+        &__bg1,
+        &__blur3
+            display: none
+        &__bg2
+            bottom: 965px
+        &__blur1
+            width: 490px
+            height: 490px
+            left: -344px
+        &__blur2
+            width: 490px
+            height: 490px
+            right: -360px
+        &__blur1
+            width: 
         &__slider
             margin-bottom: 90px
         &__itemText
@@ -104,6 +132,21 @@
 
 @media (max-width: 767px)
     .news
+        &__bg1,
+        &__bg2
+            display: none
+        &__blur1
+            width: 300px
+            height: 300px
+            left: -226px
+            top: 382px
+            opacity: .3
+        &__blur2
+            width: 300px
+            height: 300px
+            right: -219px
+            top: 1420px
+            opacity: .3
         &__item
             display: flex
             flex-direction: column
@@ -136,6 +179,12 @@
                 height: 36px
     .one-news
         padding-top: 20px
+        &__bg1,
+        &__bg2,
+        &__blur1,
+        &__blur2,
+        &__blur3
+            display: none
         &__slider
             margin-bottom: 20px
         &__itemText
