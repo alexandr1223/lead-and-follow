@@ -1,3 +1,7 @@
+@media (max-width: 1440px)
+    .our-teachers
+        &__slider
+            margin-top: -54px
 @media (max-width: 1280px)
     .white-btn
         font-size: 12px
@@ -7,7 +11,7 @@
     .first
         padding-bottom: 50px
         &::after
-            height: 170px
+            height: 310px
             bottom: 0px
             z-index: 2
         &__sliderNav
@@ -75,7 +79,7 @@
             span
                 font-size: 12px
     .product
-        height: 753px
+        height: 853px
         margin-bottom: 0
         &__blur
             top: -200px
@@ -204,8 +208,9 @@
 @media (max-width: 767px)
     .first
         height: 280px
+        z-index: 2
         &:after
-            height: 80px
+            height: 180px
         &__sliderFor
             height: 280px
             img
@@ -226,6 +231,8 @@
             height: 45px
             .slick-track
                 display: flex
+                width: 288px
+                margin-left: -80px
                 flex-direction: row
                 img
                     width: 66px
@@ -251,6 +258,7 @@
             width: 100px
             line-height: 25px
     .about
+        z-index: 3
         padding-bottom: 117px
         &__info
             margin-top: 23px
@@ -259,6 +267,10 @@
             font-size: 10px
             line-height: 17px
             margin-bottom: 0
+        &__blur
+            width: 300px
+            height: 300px
+            top: 200px
         &__item
             &--first
                 right: unset

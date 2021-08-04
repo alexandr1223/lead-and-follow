@@ -112,13 +112,54 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     $(document).ready(function(){
+      
+      $(document).ready(function(){
+        function CreateRelax(itemName, itemClass, itemSpeed) {
+          var itemName = new Rellax(itemClass, {
+            speed: itemSpeed
+           });
+        }
+        if (document.querySelector('.classes__block') && document.documentElement.clientWidth > 1280) {
+          CreateRelax('classes1', '.classes__item1', 2)
+          CreateRelax('classes2', '.classes__item2', 2.4)
+          CreateRelax('classes3', '.classes__item3', 2.3)
+          CreateRelax('classes4', '.classes__item4', 2)
+          CreateRelax('classes5', '.classes__item5', 2.2)
+          CreateRelax('classes6', '.classes__item6', 2)
+          CreateRelax('bg1', '.classes__bg1', -3)
+          CreateRelax('bg2', '.classes__bg2', -5)
+        }
+        if (document.querySelector('.about__block') && document.documentElement.clientWidth > 1280) {
+          CreateRelax('about1', '.about__item--first', 2)
+          CreateRelax('about2', '.about__item--second', 2.4)
+          CreateRelax('about3', '.about__item--third', 2.3)
+          CreateRelax('about4', '.about__item--four', 2.4)
+          CreateRelax('about5', '.about__item--five', 1.8)
+        }
+        if (document.querySelector('.product__block') && document.documentElement.clientWidth > 1280) {
+          CreateRelax('product1', '.product__item--first', 2)
+          CreateRelax('product2', '.product__item--second', 2.4)
+          CreateRelax('product3', '.product__item--third', 2)
+          CreateRelax('product4', '.product__item--four', 2.4)
+          CreateRelax('product5', '.product__item--five', 1.8)
+          CreateRelax('product6', '.product__item--six', 3)
+        }
+        if (document.querySelector('.about-us__block') && document.documentElement.clientWidth > 1280) {
+          CreateRelax('about-us1', '.about-us__item--first', 2)
+          CreateRelax('about-us2', '.about-us__item--second', 2.4)
+          CreateRelax('about-us3', '.about-us__item--third', 2)
+          CreateRelax('about-us4', '.about-us__item--four', 2.4)
+        }
+       
+       
+       });
       $('.our-teachers__slider').slick({
         centerMode: true,
         centerPadding: '100px',
         dots: true,
         slidesToShow: 3,
         variableWidth: true,
-        prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
+        prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
         nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
         responsive: [
           {
@@ -146,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         dots: true,
         slidesToShow: 3,
         variableWidth: true,
-        prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
+        prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
         nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
         responsive: [
           {
@@ -172,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         $('.one-class__slider').slick({
           slidesToShow: 1,
           variableWidth: true,
-          prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
+          prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
           nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
         });
 
@@ -182,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           arrows: true,
           fade: true,
           asNavFor: '.one-news__sliderNav',
-          prevArrow: "<div class='prev'><img src='../img/btn.png' alt='1'></div>",
+          prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
           nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
         });
       $('.one-news__sliderNav').slick({
@@ -196,4 +237,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
           focusOnSelect: true
       });
     })
+
 });
