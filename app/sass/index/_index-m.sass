@@ -26,6 +26,9 @@
     .our-teachers
         &__slider
             margin-top: -54px
+    .first
+        &__circle
+            top: 100px
 @media (max-width: 1280px)
     .white-btn
         font-size: 12px
@@ -35,8 +38,8 @@
     .first
         padding-bottom: 50px
         &::after
-            height: 310px
-            bottom: 0px
+            height: 220px
+            bottom: 40px
             z-index: 2
         &__sliderNav
             width: 100px
@@ -258,10 +261,11 @@
         z-index: 2
         &:after
             height: 180px
+            bottom: -1px
         &__sliderFor
-            height: 280px
+            height: 280px !important
             img
-                height: 280px
+                height: 280px !important
                 object-fit: cover
         &__sliderImage
             height: 45px

@@ -160,7 +160,9 @@
 	<div class="wrapper">
 		<main class="main">
 			<div class="first-screen">
-				<img src="img/dance-event-banner.png" alt="" class="first-screen__img">
+				<div class="first-screen__mainImage">
+					<img src="img/dance-event-banner.jpg" alt="" class="">
+				</div>
 				<div class="first-screen__breadcrumbs">
 					<a href="index.html">
 						<img src="img/svg/house.svg" alt="" class="img-svg first-screen__house">
@@ -185,7 +187,7 @@
 					, West Covina, CA 91792 <br>
 					City Event Hall
 				</div>
-				<a href="#" class="first-screen__btn first-screen__btn--event white-btn">
+				<a href="#event-form" class="first-screen__btn first-screen__btn--event white-btn">
 					Join us
 				</a>
 			</div>
@@ -214,13 +216,13 @@
                     </div>
 
 					<div class="start__blur blur"></div>
-					<div class="shedule__circle">
+					<div class="shedule__circle" id="event-form">
 						<h3 class="shedule__title">
 							Join us!
 						</h3>
 						<form action="#" method="POST" class="shedule__form">
 							<div class="shedule__formItem">
-								<input type="text" name="name" class="shedule__formInput" placeholder="">
+								<input required type="text" name="name" class="shedule__formInput" placeholder="">
 								<span class="shedule__formFocus">
 								</span>
 								<span class="shedule__formItem--title">
@@ -228,7 +230,7 @@
 								</span>
 							</div>
 							<div class="shedule__formItem">
-								<input type="text" name="login" class="shedule__formInput register__input--login" placeholder="">
+								<input required type="mail" name="mail" class="shedule__formInput register__input--login" placeholder="">
 								<span class="shedule__formFocus">
 								</span>
 								<span class="shedule__formItem--title">
@@ -236,7 +238,7 @@
 								</span>
 							</div>
 							<div class="shedule__formItem">
-								<input type="text" name="login" class="shedule__formInput register__input--login" placeholder="">
+								<input required type="text" name="phone" class="shedule__formInput register__input--login" placeholder="">
 								<span class="shedule__formFocus">
 								</span>
 								<span class="shedule__formItem--title">

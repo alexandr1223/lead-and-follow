@@ -352,22 +352,54 @@ input
 		transform: translateX(-50%)
 		font-size: 18px
 		line-height: 21px
-	// &__mainImage
-	// 	position: relative
-	// 	height: 551px
-	// 	img
-	// 		height: 100%
-	// 		object-fit: cover
-	// 	&::after
-	// 		content: ''
-	// 		display: block
-	// 		position: absolute
-	// 		top: 0
-	// 		left: 0
-	// 		width: 100%
-	// 		height: 100%
-	// 		background: linear-gradient(75.62deg, #009EE2 7.02%, #273992 91.67%)
-	// 		opacity: .7
+	&__mainImage
+		position: relative
+		height: 441px
+		img
+			height: 100%
+			object-fit: cover
+		&::before	
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: linear-gradient(75.62deg, #009EE2 7.02%, #273992 91.67%)
+			opacity: .7
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -2px
+			left: 0
+			width: 100%
+			height: 251px
+			background: url('../img/wave-cover.png') center center/cover no-repeat
+		&--red
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: linear-gradient(75.62deg, rgba(159, 41, 111, 0.7) 7.02%, rgba(191, 53, 179, 0.7) 91.67%)
+				opacity: .7
+				
+@media (min-width: 1600px)
+	.first-screen
+		height: 460px
+		&__mainImage
+			height: 460px
+			img
+				height: 460px
+			&::after
+				height: 340px
+
+
 @media (max-width: 1480px)
 	.header
 		margin-left: -40px
@@ -525,9 +557,9 @@ input
 				font-family: "Raleway-Bold"
 				color: #073773
 	.first-screen
-		height: 274px
+		height: 320px
 		img
-			height: 274px
+			height: 320px
 		&__title
 			top: 50px
 			font-size: 60px
@@ -552,6 +584,17 @@ input
 				padding: 0 20px !important
 				font-size: 10px !important
 				top: 70%
+		&__mainImage
+			height: 320px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				bottom: -2px
+				left: 0
+				width: 100%
+				height: 220px
+				background: url('../img/wave-cover.png') center center/cover no-repeat
 			
 	.footer
 		&__logo
@@ -591,6 +634,21 @@ input
 @media (max-width: 1050px)
 	.footer
 		background: url('../img/footer-tablet-bg.png') center center/cover no-repeat
+	.first-screen	
+		height: 274px
+		&__mainImage
+			height: 274px
+			img
+				height: 274px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				bottom: -2px
+				left: 0
+				width: 100%
+				height: 180px
+				background: url('../img/wave-cover-tablet.png') center center/cover no-repeat
 
 @media (max-width: 767px)
 	.container
@@ -719,4 +777,14 @@ input
 		&__text
 			font-size: 8px
 			line-height: 9px
-			
+		&__mainImage
+			height: 152px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				bottom: -2px
+				left: 0
+				width: 100%
+				height: 120px
+				background: url('../img/wave-cover-tablet.png') center center/cover no-repeat
