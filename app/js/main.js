@@ -92,7 +92,47 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}).eq(0).addClass('active');
 		});
 	}
-	productTabs();
+
+  	function productMobileTabs() {
+		$(document).ready(function(){
+      
+			$('.shedule__product').each(function() {
+				let ths = $(this);
+				ths.find('.shedule__contentItem').not(':first').hide();
+				$('.shedule__product-tab').eq(1).css('margin-top', $('.shedule__contentItem').eq(0).height() + 67)
+				
+				ths.find('.shedule__product-tab').click(function() {
+					
+					ths.find('.shedule__product-tab').removeClass('shedule__product-tab--activeTab').eq($(this).index()).addClass('shedule__product-tab--activeTab');
+					ths.find('.shedule__product-tab').each(function(item) {
+						$(this).css('margin', '10px 0 0 0')
+					}) 
+					let pos = ths.find('.shedule__product-tab--activeTab').position().top + 54
+					let offset = 63 + ths.find('.shedule__contentItem').hide().eq($(this).index()).fadeIn().height()
+					ths.find('.shedule__product-content').css('top', pos)
+					
+					
+					ths.find('.shedule__product-tab--activeTab').next().css('margin-top', offset)
+					if (ths.find('.shedule__product-tab').last().hasClass('shedule__product-tab--activeTab')) {
+						ths.find('.shedule__product-tab--activeTab').css('margin-bottom', offset)
+					}
+					ths.find('.shedule__contentItem').hide().eq($(this).index()).fadeIn()
+				}).eq(0).addClass('active');
+			});
+		})
+	}
+
+	function setTabs() {
+		$(document).ready(function() {
+			if (document.documentElement.clientWidth < 767) {
+				productMobileTabs();
+			} else {
+				productTabs();
+			}
+		})
+		
+	}
+	setTabs();
 
     $('.first__sliderFor').slick({
         slidesToShow: 1,
@@ -153,89 +193,99 @@ document.addEventListener("DOMContentLoaded", function(event) {
        
        
        });
-      $('.our-teachers__slider').slick({
-        centerMode: true,
-        centerPadding: '100px',
-        dots: true,
-        slidesToShow: 3,
-        variableWidth: true,
-        prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
-        nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
+      	$('.our-teachers__slider').slick({
+			centerMode: true,
+			centerPadding: '100px',
+			dots: true,
+			slidesToShow: 3,
+			variableWidth: true,
+			prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
+			nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
+			responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+				centerMode: true,
+				centerPadding: '40px',
+				slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+				centerMode: true,
+				centerPadding: '40px',
+				slidesToShow: 1
+				}
+			}
+			]
+      	});
 
-      $('.award__slider').slick({
-        centerMode: true,
-        centerPadding: '100px',
-        dots: true,
-        slidesToShow: 3,
-        variableWidth: true,
-        prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
-        nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
+		$('.award__slider').slick({
+			centerMode: true,
+			centerPadding: '100px',
+			dots: true,
+			slidesToShow: 3,
+			variableWidth: true,
+			prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
+			nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
+			responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+				centerMode: true,
+				centerPadding: '40px',
+				slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+				arrows: false,
+				centerMode: true,
+				centerPadding: '40px',
+				slidesToShow: 1
+				}
+			}
+			]
+		});
 
         $('.one-class__slider').slick({
-          slidesToShow: 1,
-          variableWidth: true,
-          prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
-          nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
+			slidesToShow: 1,
+			variableWidth: true,
+			prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
+			nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
         });
 
         $('.one-news__sliderFor').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true,
-          fade: true,
-          asNavFor: '.one-news__sliderNav',
-          prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
-          nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: true,
+			fade: true,
+			asNavFor: '.one-news__sliderNav',
+			prevArrow: "<div class='prev'><img src='../img/btn-slider.png' alt='1'></div>",
+			nextArrow: "<div class='next'><img src='../img/svg/arrow.svg' alt='2'></div>",
         });
-      $('.one-news__sliderNav').slick({
-          slidesToShow: 7,
-          slidesToScroll: 1,
-          asNavFor: '.one-news__sliderFor',
-          variableWidth: true,
-          dots: false,
-          arrows: false,
-          centerMode: true,
-          focusOnSelect: true
-      });
+      	$('.one-news__sliderNav').slick({
+			slidesToShow: 7,
+			slidesToScroll: 1,
+			asNavFor: '.one-news__sliderFor',
+			variableWidth: true,
+			dots: false,
+			arrows: false,
+			centerMode: true,
+			focusOnSelect: true
+      	});
+		$('.shedule__formInput').each(function(){
+			$(this).on('blur', function(){
+				if($(this).val().trim() != "") {
+					$(this).addClass('has-val');
+				}
+				else {
+					$(this).removeClass('has-val');
+				}
+			})    
+		})
     })
 
 });

@@ -37,6 +37,7 @@ body
 	display: flex
 	align-items: center
 	cursor: pointer
+	border: none
 	span
 		font-size: 16px
 		padding: 9px 0
@@ -50,15 +51,19 @@ body
 	background: #fff
 	border-radius: 60px
 	font-size: 16px
-	padding: 22px 46px
+	padding: 0 46px
+	text-align: center
 	color: #3483C7
+	align-items: center
 	font-family: "Raleway-Bold"
 	text-transform: uppercase
 	width: 232px
+	height: 60px
 	line-height: 16px
-	text-align: center
 	cursor: pointer
-	display: block
+	display: flex
+	border: none
+	justify-content: center
 
 .blur
 	width: 793px
@@ -95,10 +100,10 @@ input
 			position: absolute
 			width: 432px
 			height: 41px
-			background: url('../img/svg/swosh.svg') center center/cover no-repeat
-			left: -80px
-			bottom: -18px
-			z-index: 2
+			background: url('../img/svg/header-swosh.svg') center center/cover no-repeat
+			left: -120px
+			bottom: -38px
+			z-index: 3
 	&__logo
 		margin-right: 48px
 		margin-top: 14px
@@ -172,7 +177,7 @@ input
 			white-space: nowrap
 			color: #939598
 			&:not(:last-child)
-				margin-right: 15px
+				margin-right: 12px
 		.active
 			font-family: "Raleway-Bold"
 			color: #073773
@@ -291,6 +296,10 @@ input
 			font-size: 60px
 			line-height: 71px
 			max-width: 766px
+		&--top
+			width: 100%
+			top: 14%
+			text-align: center
 	&__breadcrumbs
 		position: absolute
 		top: 31px
@@ -330,8 +339,19 @@ input
 		position: absolute
 		left: 50%
 		transform: translateX(-50%)
-		top: 40%
+		top: 50%
 		line-height: 18px
+		&--event
+			top: 65%
+	&__text
+		position: absolute
+		top: 40%
+		color: #fff
+		text-align: center
+		left: 50%
+		transform: translateX(-50%)
+		font-size: 18px
+		line-height: 21px
 	// &__mainImage
 	// 	position: relative
 	// 	height: 551px
@@ -348,13 +368,15 @@ input
 	// 		height: 100%
 	// 		background: linear-gradient(75.62deg, #009EE2 7.02%, #273992 91.67%)
 	// 		opacity: .7
-
 @media (max-width: 1480px)
+	.header
+		margin-left: -40px
+@media (max-width: 1438px)
 	.title
 		font-size: 120px
 		line-height: 140px
 	.header
-		overflow: hidden
+		margin-left: 0
 		.container
 			width: 100%
 			padding: 0 20px
@@ -364,6 +386,11 @@ input
 			max-width: 688px
 			margin: 0 auto
 			height: 59px
+			&::after
+				height: 22px
+				bottom: -18px
+				width: 350px
+				left: -80px
 		&__links
 			display: none
 		&__logo
@@ -509,10 +536,22 @@ input
 				font-size: 48px
 				max-width: 688px
 				width: 652px
+			&--top
+				top: 7%
 		&__breadcrumbs
 			top: 20px
 		&__date
 			top: 20%
+		&__text
+			font-size: 12px
+			line-height: 18px
+		&__btn
+			&--event
+				width: 143px !important
+				height: 36px !important
+				padding: 0 20px !important
+				font-size: 10px !important
+				top: 70%
 			
 	.footer
 		&__logo
@@ -536,6 +575,18 @@ input
 	.container
 		width: 688px
 		margin: 0 auto
+	.first-screen
+		&__btn
+			height: 52px !important
+			width: 201px !important
+			padding: 0 100px !important
+			top: 55% 
+			&--event
+				width: 143px !important
+				height: 36px !important
+				padding: 0 20px !important
+				font-size: 10px !important
+				top: 70%
 
 @media (max-width: 1050px)
 	.footer
@@ -553,13 +604,12 @@ input
 			height: 41px
 			max-width: 100%
 			position: relative
-			z-index: 1
+			z-index: 3
 			&::after
-				top: 20px
-				width: 173px
 				height: 16px
-				left: -16px
-				z-index: 2
+				bottom: -15px
+				width: 200px
+				left: -60px
 		&__shedule
 			display: none
 		&__social
@@ -634,7 +684,7 @@ input
 			height: 152px
 		&__title
 			top: 30px
-			font-size: 40px
+			font-size: 24px
 			line-height: 50px
 			text-align: center
 			&--bottom
@@ -654,3 +704,19 @@ input
 			top: 28%
 		&__current
 			font-size: 8px
+		&__btn
+			width: 108px !important
+			height: 28px !important
+			padding: 0 30px !important
+			font-size: 10px !important
+			line-height: 110% !important
+			&--event
+				width: 107px !important
+				height: 27px !important
+				padding: 0 10px !important
+				font-size: 8px !important
+				top: 70%
+		&__text
+			font-size: 8px
+			line-height: 9px
+			

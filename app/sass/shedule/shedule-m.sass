@@ -1,0 +1,208 @@
+@media (max-width: 1280px)
+    .shedule
+        &__selector
+            height: 54px
+            [class*="-tab-"]
+                width: 266px
+                line-height: 54px
+                height: 54px
+                font-size: 16px
+        &__text
+            width: 100%
+            font-size: 16px
+            line-height: 24px
+        &__product-tabs
+            margin-top: 176px
+        &__product-tab
+            padding: 18px 18px 14px 18px
+            margin-bottom: -1px
+            &--activeTab
+                &::after
+                    display: none
+        &__contentItem
+            padding: 30px 28px 28px 30px
+        &__contentImage
+            min-width: 90px
+            max-width: 90px
+            margin-right: 60px
+            img
+                height: auto
+                margin-right: 0
+                width: 90px
+        &__contentCheck
+            grid-template-columns: 1fr 1fr 1fr
+            grid-gap: 26px 20px
+        &__checkbox
+            &+label
+                font-size: 16px
+                white-space: nowrap
+        &__difficult
+            padding: 24px 23px 26px 31px
+        &__blockTitle
+            font-size: 16px
+            min-width: 128px
+            margin-right: 22px
+        &__search
+            display: flex
+            flex-direction: column
+        &__searchButtons
+            margin: 0 auto
+            margin-top: 30px
+        &__searchBtn,
+        &__clearBtn
+            font-size: 16px
+            width: 232px
+            height: 60px
+        &__circle
+            width: 586px
+            height: 580px
+        &__title
+            font-size: 40px
+            padding-top: 90px
+            margin-bottom: 0
+        &__formItem
+            height: 50px
+            width: 420px
+            &--title
+                top: 22px
+                font-size: 14px
+        &__formInput
+            font-size: 14px
+            &:focus + .shedule__formFocus + .shedule__formItem--title 
+                top: 9px
+                font-size: 8px
+                left: 12px
+        &__btn
+            width: 174px
+            height: 45px
+            font-size: 14px
+    .has-val
+        height: 40px !important
+    .has-val + .shedule__formFocus + .shedule__formItem--title 
+        top: 9px
+        left: 12px
+        font-size: 8px
+
+@media (max-width: 767px)
+    .shedule
+        padding-top: 37px
+        &__selector
+            margin-bottom: 48px
+            height: 27px
+            [class*="-tab-"]
+                width: 134px
+                height: 27px
+                font-size: 10px
+                line-height: 27px
+        &__product
+            position: relative
+        &__product-tabs
+            display: flex
+            flex-direction: column
+            border-bottom: unset
+            margin-top: 38px
+        &__product-content
+            position: absolute
+            top: 200px
+            width: 100%
+            top: 54px
+        &__product-tab
+            border: none
+            background: transparent
+            box-shadow: 0px 15px 45px rgba(7, 55, 115, 0.1)
+            padding: 13px 23px
+            margin-top: 10px
+            border-radius: 10px
+            &:nth-child(2)
+        &__contentItem
+            background: rgba(255, 255, 255, .3)
+            box-shadow: 0px 15px 45px rgba(7, 55, 115, 0.1)
+            display: flex
+            flex-direction: column
+            width: 100%
+        &__contentCheck
+            display: flex
+            flex-direction: column
+            grid-gap: unset
+            align-items: flex-start
+            label
+                &:not(:last-child)
+                    margin-bottom: 26px
+        &__contentImage
+            margin: 0 auto
+            min-width: 144px
+            max-width: 144px
+            height: auto
+            img
+                width: 100%
+                margin-bottom: 25px
+                margin-right: 0
+        &__difficult
+            display: flex
+            flex-direction: column
+            padding: 20px 14px 6px 23px
+        &__blockTitle
+            margin-bottom: 12px
+            text-align: left
+        &__difficultBlock
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            label
+                margin-bottom: 14px
+                &:not(:last-child)
+                    margin-right: 10px
+        &__search
+            display: flex
+            flex-direction: column
+        &__searchBlock
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            padding: 20px 14px 20px 23px
+        &__searchInput
+            width: 100%
+        &__searchButtons
+            display: flex
+            flex-direction: column
+            margin-top: 20px
+        &__searchBtn
+            margin-bottom: 10px
+            margin-right: 0
+        &__circle
+            width: 354px
+            height: 330px
+            margin-left: -30px
+            margin-top: 137px
+            margin-bottom: 35px
+        &__title
+            padding-top: 39px
+            font-size: 24px
+            line-height: 28px
+        &__formInput
+            height: 40px
+            padding-top: 10px
+            padding-left: 12px
+        &__formItem
+            height: 40px
+            width: 232px
+            margin-bottom: 0
+            &--title
+                top: 22px
+                font-size: 12px
+        &__formInput
+            font-size: 14px
+            &:focus + .shedule__formFocus + .shedule__formItem--title 
+                top: 4px
+                font-size: 6px
+                left: 0px
+        &__btn
+            width: 109px
+            height: 28px
+            font-size: 12px
+        .g-recaptcha
+            margin: 10px 0 16px 0
+    .has-val + .shedule__formFocus + .shedule__formItem--title 
+        top: 4px
+        left: 0px
+        font-size: 6px
